@@ -1,5 +1,5 @@
 -- ============================================================
--- JAKSELNEWS CONTENT FACTORY — Database Migration
+-- HALODEPOK CONTENT FACTORY — Database Migration
 -- Version: 001_initial_schema
 -- Description: Core tables for AI newsroom platform
 -- ============================================================
