@@ -46,7 +46,7 @@ function ParticleCanvas() {
         if (p.y < 0) p.y = canvas.height;
         if (p.y > canvas.height) p.y = 0;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(8,145,178,${p.opacity})`; ctx.fill();
+        ctx.fillStyle = `rgba(37,99,235,${p.opacity})`; ctx.fill();
       });
       animId = requestAnimationFrame(draw);
     };
@@ -143,8 +143,8 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
   return (
     <div style={{ minHeight: '100vh', background: '#ffffff', fontFamily: "'DM Sans', system-ui, sans-serif", position: 'relative', overflow: 'hidden' }}>
       <ParticleCanvas />
-      <div style={{ position: 'fixed', top: '-10%', right: '-5%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(8,145,178,0.08) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
-      <div style={{ position: 'fixed', bottom: '-10%', left: '-5%', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(14,116,144,0.06) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', top: '-10%', right: '-5%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', bottom: '-10%', left: '-5%', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(29,78,216,0.06) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
 
       {/* Sticky Header */}
       <header style={{ position: 'sticky', top: 0, zIndex: 100, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 32px', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid #f0f0f0' }}>
@@ -162,7 +162,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
             <p style={{ fontSize: 14, color: '#94a3b8', margin: '0 0 32px' }}>AI generates slide-based content from your article</p>
 
             {errorMsg && (
-              <div style={{ background: '#fff1f2', border: '1px solid #fecaca', borderRadius: 12, padding: '12px 16px', marginBottom: 20, fontSize: 13, color: '#0891b2', display: 'flex', gap: 8, alignItems: 'center' }}>
+              <div style={{ background: '#fff1f2', border: '1px solid #fecaca', borderRadius: 12, padding: '12px 16px', marginBottom: 20, fontSize: 13, color: '#2563eb', display: 'flex', gap: 8, alignItems: 'center' }}>
                 <AlertCircle size={14} /><span>{errorMsg}</span>
               </div>
             )}
@@ -170,7 +170,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
             <div style={{ marginBottom: 28 }}>
               <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: '#64748b', marginBottom: 8, letterSpacing: '0.02em' }}>Article URL</label>
               <input type="url" value={articleUrl} onChange={e => setArticleUrl(e.target.value)} placeholder="https://halodepok.com/banjir-kemang-depok"
-                onFocus={e => (e.target.style.borderColor = 'rgba(8,145,178,0.5)')}
+                onFocus={e => (e.target.style.borderColor = 'rgba(37,99,235,0.5)')}
                 onBlur={e => (e.target.style.borderColor = '#e5e7eb')}
                 style={{ width: '100%', padding: '14px 18px', border: '1.5px solid #e5e7eb', borderRadius: 14, fontSize: 14, color: '#0f172a', background: '#fafafa', outline: 'none', boxSizing: 'border-box', transition: 'border-color 0.2s', fontFamily: 'inherit' }} />
             </div>
@@ -198,13 +198,13 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
             </div>
 
             <button onClick={doGenerate} style={{
-              width: '100%', padding: '15px 24px', background: 'linear-gradient(135deg, #0891b2, #0e7490)',
+              width: '100%', padding: '15px 24px', background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
               color: 'white', border: 'none', borderRadius: 16, fontSize: 15, fontWeight: 700, cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
-              boxShadow: '0 8px 32px rgba(8,145,178,0.35)', transition: 'transform 0.15s, box-shadow 0.15s',
+              boxShadow: '0 8px 32px rgba(37,99,235,0.35)', transition: 'transform 0.15s, box-shadow 0.15s',
             }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(8,145,178,0.45)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(8,145,178,0.35)'; }}>
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(37,99,235,0.45)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(37,99,235,0.35)'; }}>
               <Wand2 size={18} /> Generate Slides
             </button>
           </div>
@@ -215,9 +215,9 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
           <div style={{ background: 'white', border: '1.5px solid #f0f0f0', borderRadius: 24, padding: '72px 40px', boxShadow: '0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.04)', textAlign: 'center' }}>
             <div style={{ position: 'relative', width: 80, height: 80, margin: '0 auto 28px' }}>
               <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '3px solid #fee2e2' }} />
-              <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '3px solid transparent', borderTopColor: '#0891b2', animation: 'spin 0.8s linear infinite' }} />
+              <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '3px solid transparent', borderTopColor: '#2563eb', animation: 'spin 0.8s linear infinite' }} />
               <div style={{ position: 'absolute', inset: 6, borderRadius: '50%', border: '3px solid #fee2e2' }} />
-              <div style={{ position: 'absolute', inset: 6, borderRadius: '50%', border: '3px solid transparent', borderBottomColor: '#0e7490', animation: 'spin 1.2s linear infinite reverse' }} />
+              <div style={{ position: 'absolute', inset: 6, borderRadius: '50%', border: '3px solid transparent', borderBottomColor: '#1d4ed8', animation: 'spin 1.2s linear infinite reverse' }} />
             </div>
             <div style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', marginBottom: 8 }}>Generating content slides...</div>
             <p style={{ fontSize: 14, color: '#94a3b8', margin: 0 }}>AI is crafting hooks, copy & visual ideas per platform</p>
@@ -234,7 +234,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
                 <button onClick={() => doGenerate()} style={{ padding: '8px 16px', background: '#f5f5f5', color: '#64748b', border: '1.5px solid #e5e7eb', borderRadius: 10, fontSize: 12, fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
                   <Wand2 size={12} /> Regenerate
                 </button>
-                <button onClick={copyAll} style={{ padding: '8px 18px', background: copiedAll ? '#16a34a' : 'linear-gradient(135deg, #0891b2, #0e7490)', color: 'white', border: 'none', borderRadius: 10, fontSize: 12, fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, boxShadow: copiedAll ? 'none' : '0 4px 16px rgba(8,145,178,0.3)', transition: 'all 0.2s' }}>
+                <button onClick={copyAll} style={{ padding: '8px 18px', background: copiedAll ? '#16a34a' : 'linear-gradient(135deg, #2563eb, #1d4ed8)', color: 'white', border: 'none', borderRadius: 10, fontSize: 12, fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, boxShadow: copiedAll ? 'none' : '0 4px 16px rgba(37,99,235,0.3)', transition: 'all 0.2s' }}>
                   {copiedAll ? <Check size={12} /> : <Copy size={12} />}
                   {copiedAll ? 'Copied!' : 'Copy All'}
                 </button>
@@ -243,7 +243,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
 
             {posts.map((post) => {
               const plat = PLATFORMS.find(p => p.key === post.platform);
-              const color = plat?.color ?? '#0891b2';
+              const color = plat?.color ?? '#2563eb';
               return (
                 <div key={post.platform} style={{ background: 'white', border: '1.5px solid #f0f0f0', borderRadius: 20, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.04)' }}>
                   <div style={{ padding: '16px 24px', borderBottom: '1px solid #f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -266,7 +266,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
                       <div key={slide.slide_number} style={{ background: '#fafafa', border: '1.5px solid #f0f0f0', borderRadius: 14, padding: '16px 18px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                            <span style={{ fontSize: 10, fontWeight: 800, color: '#0891b2', background: 'rgba(8,145,178,0.08)', padding: '2px 8px', borderRadius: 9999, letterSpacing: '0.05em' }}>
+                            <span style={{ fontSize: 10, fontWeight: 800, color: '#2563eb', background: 'rgba(37,99,235,0.08)', padding: '2px 8px', borderRadius: 9999, letterSpacing: '0.05em' }}>
                               SLIDE {i + 1}
                             </span>
                             <span style={{ fontSize: 11, color: '#94a3b8' }}>{slide.type}</span>
@@ -285,7 +285,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
                         {slide.hook && (
                           <div style={{ marginBottom: 10 }}>
                             <div style={{ fontSize: 10, fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 4 }}>Hook</div>
-                            <div style={{ fontSize: 15, fontWeight: 700, color: '#0891b2', lineHeight: 1.3 }}>{slide.hook}</div>
+                            <div style={{ fontSize: 15, fontWeight: 700, color: '#2563eb', lineHeight: 1.3 }}>{slide.hook}</div>
                           </div>
                         )}
 
@@ -315,7 +315,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
                             <div style={{ fontSize: 10, fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 4 }}>Hashtags</div>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
                               {slide.hashtags.map(tag => (
-                                <span key={tag} style={{ fontSize: 11, color: '#0891b2', background: 'rgba(8,145,178,0.07)', padding: '3px 10px', borderRadius: 9999, fontWeight: 600 }}>{tag}</span>
+                                <span key={tag} style={{ fontSize: 11, color: '#2563eb', background: 'rgba(37,99,235,0.07)', padding: '3px 10px', borderRadius: 9999, fontWeight: 600 }}>{tag}</span>
                               ))}
                             </div>
                           </div>

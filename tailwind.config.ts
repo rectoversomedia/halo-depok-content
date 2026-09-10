@@ -45,9 +45,9 @@ const config: Config = {
           foreground: 'hsl(var(--card-foreground))',
         },
         depok: {
-          primary: '#0891B2',
-          dark: '#0F172A',
-          accent: '#06B6D4',
+          primary: '#2563EB',
+          dark: '#1E3A8A',
+          accent: '#3B82F6',
           light: '#FAFAFA',
         },
       },

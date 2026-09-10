@@ -75,7 +75,7 @@ function ParticleCanvas() {
         if (p.y < 0) p.y = canvas.height;
         if (p.y > canvas.height) p.y = 0;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(8,145,178,${p.opacity})`; ctx.fill();
+        ctx.fillStyle = `rgba(37,99,235,${p.opacity})`; ctx.fill();
       });
       animId = requestAnimationFrame(draw);
     };
@@ -166,9 +166,9 @@ export default function CreateArticlePage() {
   return (
     <div style={{ minHeight: '100vh', background: '#ffffff', fontFamily: "'DM Sans', system-ui, sans-serif", position: 'relative', overflow: 'hidden' }}>
       <ParticleCanvas />
-      <div style={{ position: 'fixed', top: '-15%', right: '-8%', width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle, rgba(8,145,178,0.08) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
-      <div style={{ position: 'fixed', bottom: '-15%', left: '-8%', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(14,116,144,0.06) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
-      <div style={{ position: 'fixed', top: '40%', left: '-5%', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(8,145,178,0.05) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', top: '-15%', right: '-8%', width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', bottom: '-15%', left: '-8%', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(29,78,216,0.06) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', top: '40%', left: '-5%', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.05) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
 
       {/* Sticky Header */}
       <header style={{ position: 'sticky', top: 0, zIndex: 100, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 32px', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid #f0f0f0' }}>
@@ -186,7 +186,7 @@ export default function CreateArticlePage() {
               <div key={s.n} style={{ display: 'flex', alignItems: 'center' }}>
                 <div style={{
                   padding: '5px 16px', borderRadius: 9999, fontSize: 12, fontWeight: 700,
-                  background: currentStep === s.n ? '#0891b2' : currentStep > s.n ? 'rgba(8,145,178,0.12)' : 'transparent',
+                  background: currentStep === s.n ? '#2563eb' : currentStep > s.n ? 'rgba(37,99,235,0.12)' : 'transparent',
                   color: currentStep >= s.n ? 'white' : '#94a3b8',
                   transition: 'all 0.25s',
                   display: 'flex', alignItems: 'center', gap: 4,
@@ -208,7 +208,7 @@ export default function CreateArticlePage() {
             <p style={{ fontSize: 14, color: '#94a3b8', margin: '0 0 32px' }}>Paste URL, text, or keyword — rewrites it in HaloDepok style</p>
 
             {errorMsg && (
-              <div style={{ background: '#fff1f2', border: '1px solid #fecaca', borderRadius: 12, padding: '12px 16px', marginBottom: 20, fontSize: 13, color: '#0891b2', display: 'flex', gap: 8, alignItems: 'center' }}>
+              <div style={{ background: '#fff1f2', border: '1px solid #fecaca', borderRadius: 12, padding: '12px 16px', marginBottom: 20, fontSize: 13, color: '#2563eb', display: 'flex', gap: 8, alignItems: 'center' }}>
                 <AlertCircle size={14} /><span>{errorMsg}</span>
               </div>
             )}
@@ -219,7 +219,7 @@ export default function CreateArticlePage() {
                 <button key={opt.key} onClick={() => setInputMode(opt.key)} style={{
                   padding: '8px 22px', fontSize: 13, fontWeight: 600, borderRadius: 11, border: 'none', cursor: 'pointer',
                   background: inputMode === opt.key ? 'white' : 'transparent',
-                  color: inputMode === opt.key ? '#0891b2' : '#64748b',
+                  color: inputMode === opt.key ? '#2563eb' : '#64748b',
                   boxShadow: inputMode === opt.key ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
                   transition: 'all 0.2s',
                 }}>{opt.label}</button>
@@ -228,33 +228,33 @@ export default function CreateArticlePage() {
 
             {inputMode === 'url' ? (
               <div style={{ marginBottom: 20 }}>
-                <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://news.detik.com/..." onFocus={e => (e.target.style.borderColor = 'rgba(8,145,178,0.5)')} onBlur={e => (e.target.style.borderColor = '#e5e7eb')}
+                <input type="url" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://news.detik.com/..." onFocus={e => (e.target.style.borderColor = 'rgba(37,99,235,0.5)')} onBlur={e => (e.target.style.borderColor = '#e5e7eb')}
                   style={{ width: '100%', padding: '14px 18px', border: '1.5px solid #e5e7eb', borderRadius: 14, fontSize: 14, color: '#0f172a', background: '#fafafa', outline: 'none', boxSizing: 'border-box', transition: 'border-color 0.2s', fontFamily: 'inherit' }} />
                 <p style={{ fontSize: 12, color: '#94a3b8', marginTop: 8 }}>Fetches article from URL then rewrites in HaloDepok style.</p>
               </div>
             ) : inputMode === 'keyword' ? (
               <div style={{ marginBottom: 20 }}>
-                <input type="text" value={keyword} onChange={e => setKeyword(e.target.value)} placeholder="e.g.: banjir kemang, cafe blok m, pembangunan tb simatupang..." onFocus={e => (e.target.style.borderColor = 'rgba(8,145,178,0.5)')} onBlur={e => (e.target.style.borderColor = '#e5e7eb')}
+                <input type="text" value={keyword} onChange={e => setKeyword(e.target.value)} placeholder="e.g.: banjir kemang, cafe blok m, pembangunan tb simatupang..." onFocus={e => (e.target.style.borderColor = 'rgba(37,99,235,0.5)')} onBlur={e => (e.target.style.borderColor = '#e5e7eb')}
                   style={{ width: '100%', padding: '14px 18px', border: '1.5px solid #e5e7eb', borderRadius: 14, fontSize: 14, color: '#0f172a', background: '#fafafa', outline: 'none', boxSizing: 'border-box', transition: 'border-color 0.2s', fontFamily: 'inherit' }} />
                 <p style={{ fontSize: 12, color: '#94a3b8', marginTop: 8 }}>Generates a complete article from keyword — no source needed.</p>
               </div>
             ) : (
               <div style={{ marginBottom: 20 }}>
-                <textarea value={rawText} onChange={e => setRawText(e.target.value)} rows={9} placeholder="Paste article text here..." onFocus={e => (e.target.style.borderColor = 'rgba(8,145,178,0.5)')} onBlur={e => (e.target.style.borderColor = '#e5e7eb')}
+                <textarea value={rawText} onChange={e => setRawText(e.target.value)} rows={9} placeholder="Paste article text here..." onFocus={e => (e.target.style.borderColor = 'rgba(37,99,235,0.5)')} onBlur={e => (e.target.style.borderColor = '#e5e7eb')}
                   style={{ width: '100%', padding: '14px 18px', border: '1.5px solid #e5e7eb', borderRadius: 14, fontSize: 14, color: '#0f172a', background: '#fafafa', outline: 'none', resize: 'vertical', lineHeight: 1.65, fontFamily: 'inherit', boxSizing: 'border-box', transition: 'border-color 0.2s' }} />
                 <p style={{ fontSize: 12, color: '#94a3b8', marginTop: 8 }}>{rawText.length.toLocaleString()} chars &middot; {wordCount(rawText).toLocaleString()} words</p>
               </div>
             )}
 
             <button onClick={() => doGenerate('generate')} style={{
-              width: '100%', padding: '15px 24px', background: 'linear-gradient(135deg, #0891b2, #0e7490)',
+              width: '100%', padding: '15px 24px', background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
               color: 'white', border: 'none', borderRadius: 16, fontSize: 15, fontWeight: 700, cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
-              boxShadow: '0 8px 32px rgba(8,145,178,0.35)',
+              boxShadow: '0 8px 32px rgba(37,99,235,0.35)',
               transition: 'transform 0.15s, box-shadow 0.15s',
             }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(8,145,178,0.45)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(8,145,178,0.35)'; }}>
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(37,99,235,0.45)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(37,99,235,0.35)'; }}>
               <Wand2 size={18} /> Write Article
             </button>
 
@@ -271,9 +271,9 @@ export default function CreateArticlePage() {
           <div style={{ background: 'white', border: '1.5px solid #f0f0f0', borderRadius: 24, padding: '72px 40px', boxShadow: '0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.04)', textAlign: 'center' }}>
             <div style={{ position: 'relative', width: 80, height: 80, margin: '0 auto 28px' }}>
               <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '3px solid #fee2e2' }} />
-              <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '3px solid transparent', borderTopColor: '#0891b2', animation: 'spin 0.8s linear infinite' }} />
+              <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '3px solid transparent', borderTopColor: '#2563eb', animation: 'spin 0.8s linear infinite' }} />
               <div style={{ position: 'absolute', inset: 6, borderRadius: '50%', border: '3px solid #fee2e2' }} />
-              <div style={{ position: 'absolute', inset: 6, borderRadius: '50%', border: '3px solid transparent', borderBottomColor: '#0e7490', animation: 'spin 1.2s linear infinite reverse' }} />
+              <div style={{ position: 'absolute', inset: 6, borderRadius: '50%', border: '3px solid transparent', borderBottomColor: '#1d4ed8', animation: 'spin 1.2s linear infinite reverse' }} />
             </div>
             <div style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', marginBottom: 8 }}>{statusText}</div>
             <p style={{ fontSize: 14, color: '#94a3b8', margin: 0 }}>HaloDepok is crafting your article...</p>
@@ -300,7 +300,7 @@ export default function CreateArticlePage() {
                 <Link href="/" style={{ background: '#f5f5f5', color: '#64748b', border: '1.5px solid #e5e7eb', borderRadius: 10, padding: '7px 14px', fontSize: 12, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5, textDecoration: 'none' }}>
                   Home
                 </Link>
-                <button onClick={handleCopy} style={{ background: copied ? '#16a34a' : 'linear-gradient(135deg, #0891b2, #0e7490)', color: 'white', border: 'none', borderRadius: 10, padding: '7px 16px', fontSize: 12, fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, boxShadow: copied ? 'none' : '0 4px 16px rgba(8,145,178,0.35)', transition: 'all 0.2s' }}>
+                <button onClick={handleCopy} style={{ background: copied ? '#16a34a' : 'linear-gradient(135deg, #2563eb, #1d4ed8)', color: 'white', border: 'none', borderRadius: 10, padding: '7px 16px', fontSize: 12, fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, boxShadow: copied ? 'none' : '0 4px 16px rgba(37,99,235,0.35)', transition: 'all 0.2s' }}>
                   {copied ? <Check size={12} /> : <Copy size={12} />}
                   {copied ? 'Copied!' : 'Copy WP HTML'}
                 </button>
@@ -334,21 +334,21 @@ export default function CreateArticlePage() {
             <div style={{ background: 'white', border: '1.5px solid #f0f0f0', borderRadius: 14, padding: '16px 20px', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
                 <span style={{ fontSize: 12, fontWeight: 600, color: '#64748b' }}>Word Count</span>
-                <span style={{ fontSize: 13, fontWeight: 700, color: wc >= WORD_TARGET ? '#16a34a' : wc >= WORD_TARGET * 0.7 ? '#d97706' : '#0891b2' }}>
+                <span style={{ fontSize: 13, fontWeight: 700, color: wc >= WORD_TARGET ? '#16a34a' : wc >= WORD_TARGET * 0.7 ? '#d97706' : '#2563eb' }}>
                   {wc.toLocaleString()} kata
                   {wc < WORD_TARGET && <span style={{ fontWeight: 400, color: '#94a3b8', marginLeft: 4 }}>/ min {WORD_TARGET.toLocaleString()}</span>}
                   {wc >= WORD_TARGET && <Check size={13} style={{ display: 'inline', marginLeft: 6 }} />}
                 </span>
               </div>
               <div style={{ height: 5, background: '#f0f0f0', borderRadius: 9999, overflow: 'hidden' }}>
-                <div style={{ width: `${wcPct}%`, height: '100%', borderRadius: 9999, background: wc >= WORD_TARGET ? '#16a34a' : wc >= WORD_TARGET * 0.7 ? '#d97706' : 'linear-gradient(90deg, #0891b2, #0e7490)', transition: 'width 0.5s ease' }} />
+                <div style={{ width: `${wcPct}%`, height: '100%', borderRadius: 9999, background: wc >= WORD_TARGET ? '#16a34a' : wc >= WORD_TARGET * 0.7 ? '#d97706' : 'linear-gradient(90deg, #2563eb, #1d4ed8)', transition: 'width 0.5s ease' }} />
               </div>
             </div>
 
             {/* Tabs */}
             <div style={{ display: 'flex', gap: 0, background: '#f5f5f5', border: '1.5px solid #e5e7eb', borderRadius: 12, padding: 4, width: 'fit-content' }}>
               {([{ key: 'edit', label: 'Edit', icon: <Eye size={12} /> }, { key: 'html', label: 'HTML', icon: <Code size={12} /> }] as const).map(t => (
-                <button key={t.key} onClick={() => setTab(t.key)} style={{ padding: '7px 18px', fontSize: 12, fontWeight: 600, borderRadius: 10, cursor: 'pointer', background: tab === t.key ? 'white' : 'transparent', color: tab === t.key ? '#0891b2' : '#94a3b8', border: tab === t.key ? '1.5px solid #f0f0f0' : '1px solid transparent', display: 'flex', alignItems: 'center', gap: 6, transition: 'all 0.2s', boxShadow: tab === t.key ? '0 2px 8px rgba(0,0,0,0.06)' : 'none' }}>{t.icon}{t.label}</button>
+                <button key={t.key} onClick={() => setTab(t.key)} style={{ padding: '7px 18px', fontSize: 12, fontWeight: 600, borderRadius: 10, cursor: 'pointer', background: tab === t.key ? 'white' : 'transparent', color: tab === t.key ? '#2563eb' : '#94a3b8', border: tab === t.key ? '1.5px solid #f0f0f0' : '1px solid transparent', display: 'flex', alignItems: 'center', gap: 6, transition: 'all 0.2s', boxShadow: tab === t.key ? '0 2px 8px rgba(0,0,0,0.06)' : 'none' }}>{t.icon}{t.label}</button>
               ))}
             </div>
 
@@ -359,7 +359,7 @@ export default function CreateArticlePage() {
                   <span style={{ fontSize: 12, fontWeight: 600, color: '#64748b' }}>Body</span>
                   <div style={{ display: 'flex', gap: 0, background: '#f5f5f5', borderRadius: 8, padding: 3 }}>
                     {([['html', 'HTML'], ['preview', 'Preview']] as const).map(([v, label]) => (
-                      <button key={v} onClick={() => setBodyView(v as 'html' | 'preview')} style={{ padding: '4px 12px', fontSize: 11, fontWeight: 600, borderRadius: 6, border: 'none', cursor: 'pointer', background: bodyView === v ? 'white' : 'transparent', color: bodyView === v ? '#0891b2' : '#94a3b8', transition: 'all 0.2s', boxShadow: bodyView === v ? '0 2px 6px rgba(0,0,0,0.08)' : 'none' }}>{label}</button>
+                      <button key={v} onClick={() => setBodyView(v as 'html' | 'preview')} style={{ padding: '4px 12px', fontSize: 11, fontWeight: 600, borderRadius: 6, border: 'none', cursor: 'pointer', background: bodyView === v ? 'white' : 'transparent', color: bodyView === v ? '#2563eb' : '#94a3b8', transition: 'all 0.2s', boxShadow: bodyView === v ? '0 2px 6px rgba(0,0,0,0.08)' : 'none' }}>{label}</button>
                     ))}
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function CreateArticlePage() {
                     <style>{`
                       .prev-body h2 { font-size: 1.25em; font-weight: 700; color: #0f172a; margin: 24px 0 8px; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
                       .prev-body p { font-size: 15px; color: #374151; line-height: 1.8; margin: 0 0 14px; }
-                      .prev-body blockquote { margin: 16px 0; padding: 12px 18px; background: rgba(8,145,178,0.06); border-left: 4px solid #0891b2; border-radius: 0 8px 8px 0; }
+                      .prev-body blockquote { margin: 16px 0; padding: 12px 18px; background: rgba(37,99,235,0.06); border-left: 4px solid #2563eb; border-radius: 0 8px 8px 0; }
                       .prev-body blockquote p { font-style: italic; color: #64748b; margin: 0; }
                       .prev-body ul { padding-left: 22px; margin: 0 0 14px; }
                       .prev-body li { font-size: 15px; color: #374151; line-height: 1.7; margin-bottom: 5px; }
@@ -387,12 +387,12 @@ export default function CreateArticlePage() {
               <div style={{ background: 'white', border: '1.5px solid #f0f0f0', borderRadius: 16, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.04)' }}>
                 <div style={{ padding: '14px 20px', borderBottom: '1px solid #f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 13, fontWeight: 700, color: '#0f172a' }}>WordPress HTML</span>
-                  <button onClick={handleCopy} style={{ background: copied ? '#16a34a' : 'linear-gradient(135deg, #0891b2, #0e7490)', color: 'white', border: 'none', borderRadius: 8, padding: '7px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <button onClick={handleCopy} style={{ background: copied ? '#16a34a' : 'linear-gradient(135deg, #2563eb, #1d4ed8)', color: 'white', border: 'none', borderRadius: 8, padding: '7px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6 }}>
                     {copied ? <Check size={11} /> : <Copy size={11} />}
                     {copied ? 'Copied!' : 'Copy HTML'}
                   </button>
                 </div>
-                <div style={{ padding: '10px 20px', background: 'rgba(8,145,178,0.05)', borderBottom: '1px solid rgba(8,145,178,0.1)', fontSize: 12, color: '#0891b2' }}>
+                <div style={{ padding: '10px 20px', background: 'rgba(37,99,235,0.05)', borderBottom: '1px solid rgba(37,99,235,0.1)', fontSize: 12, color: '#2563eb' }}>
                   <strong>Guide:</strong> In WP admin &rarr; <strong>Text</strong> tab &rarr; paste below.
                 </div>
                 <textarea readOnly value={wpHtml} rows={18} style={{ width: '100%', padding: '16px 20px', border: 'none', outline: 'none', fontSize: 11.5, color: '#374151', background: 'transparent', fontFamily: "'Fira Code', 'Menlo', monospace", resize: 'none', lineHeight: 1.65, boxSizing: 'border-box' }} />
@@ -402,7 +402,7 @@ export default function CreateArticlePage() {
                       <div key={item.label} style={{ background: '#fafafa', border: '1px solid #f0f0f0', borderRadius: 10, padding: '8px 12px' }}>
                         <div style={{ fontSize: 10, fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 3 }}>{item.label}</div>
                         <div style={{ fontSize: 12, color: '#374151', fontWeight: 500, wordBreak: 'break-all' }}>{item.value || '—'}</div>
-                        {item.limit && <div style={{ fontSize: 10, color: item.ok ? '#16a34a' : '#0891b2', marginTop: 2, fontWeight: 600 }}>{item.value.length}/{item.limit} {item.ok ? '✓' : '✗'}</div>}
+                        {item.limit && <div style={{ fontSize: 10, color: item.ok ? '#16a34a' : '#2563eb', marginTop: 2, fontWeight: 600 }}>{item.value.length}/{item.limit} {item.ok ? '✓' : '✗'}</div>}
                       </div>
                     ))}
                   </div>
@@ -421,9 +421,9 @@ export default function CreateArticlePage() {
                   <div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
                       <span style={{ fontSize: 12, fontWeight: 600, color: '#64748b' }}>SEO Title <span style={{ color: '#94a3b8', fontWeight: 400 }}>(max 60)</span></span>
-                      <span style={{ fontSize: 11, color: isSeoTitleOk ? '#16a34a' : '#0891b2', fontWeight: 600 }}>{editSeoTitle.length}/60 {isSeoTitleOk ? '✓' : '✗'}</span>
+                      <span style={{ fontSize: 11, color: isSeoTitleOk ? '#16a34a' : '#2563eb', fontWeight: 600 }}>{editSeoTitle.length}/60 {isSeoTitleOk ? '✓' : '✗'}</span>
                     </div>
-                    <input value={editSeoTitle} onChange={e => setEditSeoTitle(e.target.value)} style={{ width: '100%', padding: '10px 14px', border: `1.5px solid ${isSeoTitleOk ? '#e5e7eb' : 'rgba(8,145,178,0.4)'}`, borderRadius: 12, fontSize: 13, color: '#0f172a', background: '#fafafa', outline: 'none', boxSizing: 'border-box', fontFamily: 'inherit' }} />
+                    <input value={editSeoTitle} onChange={e => setEditSeoTitle(e.target.value)} style={{ width: '100%', padding: '10px 14px', border: `1.5px solid ${isSeoTitleOk ? '#e5e7eb' : 'rgba(37,99,235,0.4)'}`, borderRadius: 12, fontSize: 13, color: '#0f172a', background: '#fafafa', outline: 'none', boxSizing: 'border-box', fontFamily: 'inherit' }} />
                     <div style={{ marginTop: 6, padding: '10px 12px', background: '#fafafa', border: '1px solid #f0f0f0', borderRadius: 8 }}>
                       <div style={{ color: '#1d4ed8', fontSize: 13, marginBottom: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{editSeoTitle || 'SEO Title...'}</div>
                       <div style={{ color: '#16a34a', fontSize: 11, marginBottom: 1 }}>halodepok.com/{editSlug || 'slug'}</div>
@@ -433,9 +433,9 @@ export default function CreateArticlePage() {
                   <div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
                       <span style={{ fontSize: 12, fontWeight: 600, color: '#64748b' }}>Meta Description <span style={{ color: '#94a3b8', fontWeight: 400 }}>(max 155)</span></span>
-                      <span style={{ fontSize: 11, color: isMetaDescOk ? '#16a34a' : '#0891b2', fontWeight: 600 }}>{editMetaDesc.length}/155 {isMetaDescOk ? '✓' : '✗'}</span>
+                      <span style={{ fontSize: 11, color: isMetaDescOk ? '#16a34a' : '#2563eb', fontWeight: 600 }}>{editMetaDesc.length}/155 {isMetaDescOk ? '✓' : '✗'}</span>
                     </div>
-                    <textarea value={editMetaDesc} onChange={e => setEditMetaDesc(e.target.value)} rows={2} style={{ width: '100%', padding: '10px 14px', border: `1.5px solid ${isMetaDescOk ? '#e5e7eb' : 'rgba(8,145,178,0.4)'}`, borderRadius: 12, fontSize: 13, color: '#0f172a', background: '#fafafa', outline: 'none', resize: 'none', boxSizing: 'border-box', fontFamily: 'inherit' }} />
+                    <textarea value={editMetaDesc} onChange={e => setEditMetaDesc(e.target.value)} rows={2} style={{ width: '100%', padding: '10px 14px', border: `1.5px solid ${isMetaDescOk ? '#e5e7eb' : 'rgba(37,99,235,0.4)'}`, borderRadius: 12, fontSize: 13, color: '#0f172a', background: '#fafafa', outline: 'none', resize: 'none', boxSizing: 'border-box', fontFamily: 'inherit' }} />
                   </div>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                     <div>
@@ -463,8 +463,8 @@ export default function CreateArticlePage() {
                 <label style={{ display: 'block', fontSize: 12, fontWeight: 700, color: '#64748b', marginBottom: 10 }}>Key Facts (E-E-A-T)</label>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {((generated as { key_facts: string[] }).key_facts).map((fact, i) => (
-                    <div key={i} style={{ background: 'rgba(8,145,178,0.05)', border: '1px solid rgba(8,145,178,0.12)', borderRadius: 10, padding: '9px 14px', fontSize: 13, color: '#374151', display: 'flex', gap: 8 }}>
-                      <span style={{ fontWeight: 800, color: '#0891b2', flexShrink: 0 }}>{i + 1}.</span>
+                    <div key={i} style={{ background: 'rgba(37,99,235,0.05)', border: '1px solid rgba(37,99,235,0.12)', borderRadius: 10, padding: '9px 14px', fontSize: 13, color: '#374151', display: 'flex', gap: 8 }}>
+                      <span style={{ fontWeight: 800, color: '#2563eb', flexShrink: 0 }}>{i + 1}.</span>
                       <span>{fact}</span>
                     </div>
                   ))}

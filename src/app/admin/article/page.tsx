@@ -30,7 +30,7 @@ export default function AdminArticlePage() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
               <div style={{
                 width: 40, height: 40, borderRadius: 12,
-                background: 'linear-gradient(135deg, #0891b2, #0e7490)',
+                background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}>
                 <PenLine size={18} color="white" />

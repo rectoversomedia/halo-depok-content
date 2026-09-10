@@ -52,7 +52,7 @@ export default function LandingPage() {
         if (p.y > canvas.height) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(8,145,178,${p.opacity})`;
+        ctx.fillStyle = `rgba(37,99,235,${p.opacity})`;
         ctx.fill();
       });
       animId = requestAnimationFrame(draw);
@@ -68,10 +68,10 @@ export default function LandingPage() {
       <canvas ref={canvasRef} style={{ position: 'fixed', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0 }} />
 
       {/* Bold gradient blobs */}
-      <div style={{ position: 'fixed', top: '-15%', right: '-8%', width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle, rgba(8,145,178,0.2) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
-      <div style={{ position: 'fixed', bottom: '-15%', left: '-8%', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(14,116,144,0.18) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
-      <div style={{ position: 'fixed', top: '40%', left: '-5%', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(8,145,178,0.12) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
-      <div style={{ position: 'fixed', bottom: '30%', right: '-5%', width: 350, height: 350, borderRadius: '50%', background: 'radial-gradient(circle, rgba(6,182,212,0.1) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', top: '-15%', right: '-8%', width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', bottom: '-15%', left: '-8%', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(29,78,216,0.18) 0%, transparent 65%)', filter: 'blur(100px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', top: '40%', left: '-5%', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
+      <div style={{ position: 'fixed', bottom: '30%', right: '-5%', width: 350, height: 350, borderRadius: '50%', background: 'radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
 
       <div style={{ position: 'relative', zIndex: 1 }}>
 
@@ -81,7 +81,7 @@ export default function LandingPage() {
           width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '16px 32px',
           background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
-          borderBottom: '1px solid rgba(8,145,178,0.08)',
+          borderBottom: '1px solid rgba(37,99,235,0.08)',
         }}>
           <img src="/logo.png" alt="HaloDepok" style={{ height: 36, width: 'auto', objectFit: 'contain' }} />
         </header>
@@ -90,17 +90,17 @@ export default function LandingPage() {
         <section style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '56px 24px 40px', textAlign: 'center' }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(8,145,178,0.07)', border: '1px solid rgba(8,145,178,0.15)',
+            background: 'rgba(37,99,235,0.07)', border: '1px solid rgba(37,99,235,0.15)',
             borderRadius: 9999, padding: '6px 16px', marginBottom: 24,
           }}>
-            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#0891b2' }} />
-            <span style={{ fontSize: 11, fontWeight: 700, color: '#0891b2', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Depok — Hyperlocal Newsroom</span>
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#2563eb' }} />
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#2563eb', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Depok — Hyperlocal Newsroom</span>
           </div>
 
           <h1 style={{ fontSize: 'clamp(30px, 5vw, 52px)', fontWeight: 800, color: '#0f172a', lineHeight: 1.15, letterSpacing: '-0.025em', marginBottom: 16 }}>
             Hyperlocal Depok Newsroom
             <br />
-            <span style={{ background: 'linear-gradient(135deg, #0891b2, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            <span style={{ background: 'linear-gradient(135deg, #2563eb, #60a5fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Built for Speed
             </span>
           </h1>
@@ -123,8 +123,8 @@ export default function LandingPage() {
             }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLAnchorElement;
-                el.style.borderColor = 'rgba(8,145,178,0.4)';
-                el.style.boxShadow = '0 8px 40px rgba(8,145,178,0.14)';
+                el.style.borderColor = 'rgba(37,99,235,0.4)';
+                el.style.boxShadow = '0 8px 40px rgba(37,99,235,0.14)';
                 el.style.transform = 'translateY(-5px)';
               }}
               onMouseLeave={e => {
@@ -136,9 +136,9 @@ export default function LandingPage() {
             >
               <div style={{
                 width: 68, height: 68, borderRadius: 22,
-                background: 'linear-gradient(135deg, #0891b2, #0e7490)',
+                background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20,
-                boxShadow: '0 12px 40px rgba(8,145,178,0.35)',
+                boxShadow: '0 12px 40px rgba(37,99,235,0.35)',
               }}>
                 <PenLine size={30} color="white" />
               </div>
@@ -149,8 +149,8 @@ export default function LandingPage() {
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
                 {['Yoast SEO', 'E-E-A-T', 'GEO'].map(tag => (
                   <span key={tag} style={{
-                    fontSize: 11, fontWeight: 700, color: '#0891b2',
-                    background: 'rgba(8,145,178,0.07)', border: '1px solid rgba(8,145,178,0.15)',
+                    fontSize: 11, fontWeight: 700, color: '#2563eb',
+                    background: 'rgba(37,99,235,0.07)', border: '1px solid rgba(37,99,235,0.15)',
                     padding: '4px 12px', borderRadius: 9999, letterSpacing: '0.03em',
                   }}>{tag}</span>
                 ))}
@@ -214,8 +214,8 @@ export default function LandingPage() {
                   background: 'white', border: '1.5px solid #f0f0f0', borderRadius: 16, padding: '18px 20px',
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                    <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(8,145,178,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <Icon size={16} color="#0891b2" />
+                    <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(37,99,235,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <Icon size={16} color="#2563eb" />
                     </div>
                     <span style={{ fontSize: 14, fontWeight: 700, color: '#0f172a' }}>{label}</span>
                   </div>
