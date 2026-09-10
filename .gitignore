@@ -58,3 +58,4 @@ next-env.d.ts
 *.pem
 .vercelignore
 .vercel
+.env*
