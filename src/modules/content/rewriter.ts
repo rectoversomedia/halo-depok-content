@@ -274,6 +274,7 @@ Karena ini keyword-only (tanpa source text), lo HARUS:
 ${locationLabel}
 ${sourceLine}
 ${categoryLabel}
+`;
 
   const result = await ai.structuredGenerate<{
     title: string;
