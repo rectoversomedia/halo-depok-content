@@ -74,7 +74,7 @@ export default function AdminPage() {
         background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
         borderBottom: '1px solid rgba(37,99,235,0.08)',
       }}>
-        <img src="/logo.png" alt="HaloDepok" style={{ height: 36, width: 'auto', objectFit: 'contain' }} />
+        <img src="/logo.png" alt="HaloDepok" style={{ height: 54, width: 'auto', objectFit: 'contain' }} />
       </header>
 
       <div style={{ position: 'relative', zIndex: 1, minHeight: 'calc(100vh - 69px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '48px 24px' }}>
