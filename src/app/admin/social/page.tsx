@@ -149,7 +149,7 @@ ${(s.hashtags || []).join(' ')}`).join('\n\n')}`;
       {/* Sticky Header */}
       <header style={{ position: 'sticky', top: 0, zIndex: 100, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 32px', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid #f0f0f0' }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <img src="/logo.png" alt="HaloDepok" style={{ height: 48, width: 'auto', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="HaloDepok" style={{ height: 96, width: 'auto', objectFit: 'contain' }} />
         </Link>
       </header>
 

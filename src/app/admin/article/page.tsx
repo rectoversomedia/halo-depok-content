@@ -14,7 +14,7 @@ export default function AdminArticlePage() {
 
         {/* Logo */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
-          <img src="/logo.png" alt="HaloDepok" style={{ height: 60, width: 'auto', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="HaloDepok" style={{ height: 120, width: 'auto', objectFit: 'contain' }} />
         </div>
 
         {/* Cards */}
