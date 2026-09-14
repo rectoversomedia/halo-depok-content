@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { PenLine, Share2, Zap, MapPin, Globe, TrendingUp } from 'lucide-react';
+import { PenLine, Share2, Zap, MapPin, Globe, TrendingUp, Lightbulb } from 'lucide-react';
 
 const FEATURES = [
   { icon: Zap, label: 'AI-Powered', desc: 'Smart rewrite engine with E-E-A-T & Yoast SEO compliance' },
@@ -196,6 +196,51 @@ export default function LandingPage() {
                   <span key={tag} style={{
                     fontSize: 11, fontWeight: 700, color: '#1d9bf0',
                     background: 'rgba(29,155,240,0.07)', border: '1px solid rgba(29,155,240,0.15)',
+                    padding: '4px 12px', borderRadius: 9999,
+                  }}>{tag}</span>
+                ))}
+              </div>
+            </Link>
+
+            {/* Content Ideas */}
+            <Link href="/ideas" style={{
+              flex: '1 1 300px', maxWidth: 360,
+              display: 'flex', flexDirection: 'column', alignItems: 'center',
+              background: 'white', border: '1.5px solid #f0f0f0', borderRadius: 24,
+              padding: '36px 28px', textDecoration: 'none',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.04)',
+              transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)',
+            }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.borderColor = 'rgba(168,85,247,0.5)';
+                el.style.boxShadow = '0 8px 40px rgba(168,85,247,0.16)';
+                el.style.transform = 'translateY(-5px)';
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.borderColor = '#f0f0f0';
+                el.style.boxShadow = '0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.04)';
+                el.style.transform = 'translateY(0)';
+              }}
+            >
+              <div style={{
+                width: 68, height: 68, borderRadius: 22,
+                background: 'linear-gradient(135deg, #a855f7, #7e22ce)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20,
+                boxShadow: '0 12px 40px rgba(168,85,247,0.35)',
+              }}>
+                <Lightbulb size={30} color="white" />
+              </div>
+              <div style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', marginBottom: 8, letterSpacing: '-0.01em' }}>Content Ideas</div>
+              <p style={{ fontSize: 13, color: '#94a3b8', lineHeight: 1.65, marginBottom: 18 }}>
+                Evergreen topics & trending angles about Jaksel & Depok — GEO & SEO optimized
+              </p>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
+                {['Evergreen', 'GEO', 'Jaksel & Depok'].map(tag => (
+                  <span key={tag} style={{
+                    fontSize: 11, fontWeight: 700, color: '#a855f7',
+                    background: 'rgba(168,85,247,0.07)', border: '1px solid rgba(168,85,247,0.2)',
                     padding: '4px 12px', borderRadius: 9999,
                   }}>{tag}</span>
                 ))}

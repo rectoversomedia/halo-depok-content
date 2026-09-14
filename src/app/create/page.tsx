@@ -94,6 +94,18 @@ export default function CreateArticlePage() {
   const [statusText, setStatusText] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [generated, setGenerated] = useState<Record<string, unknown> | null>(null);
+
+  // Handle keyword from ideas page via URL param
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const kw = params.get('keyword');
+      if (kw) {
+        setKeyword(kw);
+        setInputMode('keyword');
+      }
+    }
+  }, []);
   const [tab, setTab] = useState<Tab>('edit');
   const [bodyView, setBodyView] = useState<'html' | 'preview'>('preview');
   const [copied, setCopied] = useState(false);
