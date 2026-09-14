@@ -104,13 +104,13 @@ export default function IdeasPage() {
         <header style={{
           position: 'sticky', top: 0, zIndex: 100,
           width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center',
-          padding: '14px 32px',
+          padding: '10px 32px',
           background: 'rgba(250,248,255,0.9)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           borderBottom: '1px solid rgba(168,85,247,0.08)',
         }}>
-          <img src="/logo.png" alt="HaloDepok" style={{ height: 80, width: 'auto', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="HaloDepok" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
         </header>
 
         {/* Hero */}

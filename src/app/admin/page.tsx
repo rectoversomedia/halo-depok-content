@@ -70,11 +70,11 @@ export default function AdminPage() {
       <header style={{
         position: 'sticky', top: 0, zIndex: 100,
         width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center',
-        padding: '16px 32px',
+        padding: '12px 32px',
         background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
         borderBottom: '1px solid rgba(37,99,235,0.08)',
       }}>
-        <img src="/logo.png" alt="HaloDepok" style={{ height: 108, width: 'auto', objectFit: 'contain' }} />
+        <img src="/logo.png" alt="HaloDepok" style={{ height: 56, width: 'auto', objectFit: 'contain' }} />
       </header>
 
       <div style={{ position: 'relative', zIndex: 1, minHeight: 'calc(100vh - 69px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '48px 24px' }}>

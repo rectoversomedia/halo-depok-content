@@ -183,9 +183,9 @@ export default function CreateArticlePage() {
       <div style={{ position: 'fixed', top: '40%', left: '-5%', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.05) 0%, transparent 65%)', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
 
       {/* Sticky Header */}
-      <header style={{ position: 'sticky', top: 0, zIndex: 100, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 32px', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid #f0f0f0' }}>
+      <header style={{ position: 'sticky', top: 0, zIndex: 100, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px 32px', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid #f0f0f0' }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <img src="/logo.png" alt="HaloDepok" style={{ height: 96, width: 'auto', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="HaloDepok" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
         </Link>
       </header>
 
