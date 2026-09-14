@@ -234,10 +234,10 @@ export default function LandingPage() {
               </div>
               <div style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', marginBottom: 8, letterSpacing: '-0.01em' }}>Content Ideas</div>
               <p style={{ fontSize: 13, color: '#94a3b8', lineHeight: 1.65, marginBottom: 18 }}>
-                Evergreen topics & trending angles about Jaksel & Depok — GEO & SEO optimized
+                Evergreen topics & trending angles about Depok — GEO & SEO optimized
               </p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
-                {['Evergreen', 'GEO', 'Jaksel & Depok'].map(tag => (
+                {['Evergreen', 'GEO', 'Depok'].map(tag => (
                   <span key={tag} style={{
                     fontSize: 11, fontWeight: 700, color: '#a855f7',
                     background: 'rgba(168,85,247,0.07)', border: '1px solid rgba(168,85,247,0.2)',
